@@ -2,7 +2,7 @@ extends: spectral:oas
 
 except: 
   'fixtures/test.oas.yml#/paths/~1todos/get':
-    - operation-description
+    - operation-description 
 
   'fixtures/non_existent.yml#':
     - oas3-api-servers
