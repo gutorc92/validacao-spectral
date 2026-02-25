@@ -1,6 +1,6 @@
 extends: spectral:oas
 
-except:
+except: 
   'fixtures/test.oas.yml#/paths/~1todos/get':
     - operation-description
 
