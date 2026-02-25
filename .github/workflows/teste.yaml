@@ -1,0 +1,16 @@
+name: API Linting
+on: [push]
+jobs:
+  spectral_lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Run Spectral linting
+        uses: gutorc92/spectral-action@main # Use the official action
+        with:
+          # Optional: specify a glob pattern for files to lint
+          files-glob: './**/*@(open|async)api.y?(a)ml'
+          host_api: https://api.biostation.ia.br/openapi.json 
+          # Optional: specify fail severity (error, warn, info, hint, off)
+          fail-severity: 'error'
