@@ -10,7 +10,5 @@ jobs:
         uses: gutorc92/spectral-action@master # Use the official action
         with:
           # Optional: specify a glob pattern for files to lint
-          files-glob: './**/*@(open|async)api.y?(a)ml'
-          host_api: https://api.biostation.ia.br/openapi.json 
-          # Optional: specify fail severity (error, warn, info, hint, off)
-          fail-severity: 'error'
+          files_glob: './**/*@(open|async)api.y?(a)ml'
+          host_api: https://api.biostation.ia.br/openapi.json
