@@ -7,8 +7,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
       - name: Run Spectral linting
-        uses: gutorc92/spectral-action@master # Use the official action
+        uses: gutorc92/spectral-check@main # Use the official action
         with:
           # Optional: specify a glob pattern for files to lint
-          files_glob: './**/*@(open|async)api.y?(a)ml'
+          # files_glob: './**/*@(open|async)api.y?(a)ml'
           host_api: https://api.biostation.ia.br/openapi.json
