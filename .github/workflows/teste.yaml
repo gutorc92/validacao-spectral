@@ -12,3 +12,5 @@ jobs:
           # Optional: specify a glob pattern for files to lint
           # files_glob: './**/*@(open|async)api.y?(a)ml'
           host_api: https://api.biostation.ia.br/openapi.json
+        env:
+          ACTIONS_RUNNER_DEBUG: true
