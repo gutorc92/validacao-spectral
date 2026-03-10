@@ -1,10 +1,11 @@
 rules:
-  paths-kebab-case:
-    description: Paths should be kebab-case.
-    message: "{{property}} should be kebab-case (lower-case and separated with hyphens)"
-    severity: warn
-    given: $.paths[*]~
+  # Rule Name
+  ensure-info-title:
+    description: Info object must have a title
+    message: "The API must have a title defined."
+    given: "$.info"
+    severity: error
     then:
-      function: pattern
-      functionOptions:
-        match: "^(\/|[a-z0-9-.]+|{[a-zA-Z0-9_]+})+$"
+      field: title
+      function: truthy # Built-in function: value must not be empty, null, or false
+
